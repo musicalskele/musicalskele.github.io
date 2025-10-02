@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bweh">
+    <div class="scanlines"></div>
+    <div class="overlay"></div>
+    <div class="window login-window fade-in">
+      <img src="./assets/images/heart_login.gif" style="height: 48px;image-rendering: pixelated;">
+      <form class="login-form" novalidate>
+        <label for="usrname"><span class="enter_name">ENTER YOUR NAME</span></label>
+        <input type="text" id="usrname" name="usrname" placeholder="username">
+        <label for="pwd"><span class="secret">WHAT IS YOUR SECRET?</span></label>
+        <input type="password" id="pwd" name="pwd" placeholder="password">
+        <button type="submit">ENTER</button>
+      </form>
+      <div class="theme-switcher">
+        <label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
+        <label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
+        <label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
+      NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
+      ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
+      TYPEFACE <a href="https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.</p>
+  </footer>
+  <script>
+    const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+    window.addEventListener("resize", fix);
+    fix();
+</script>
+  
+</body>
+</html>

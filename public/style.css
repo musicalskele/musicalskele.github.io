@@ -1,0 +1,413 @@
+:root {
+    color-scheme: light dark;
+
+    --bg0:      light-dark(#9096b9, #0e021e);
+    --fg0:      light-dark(#0e021e, #9096b9);
+    --cl0:      light-dark(#49456e, #49456e);
+    --border2:  light-dark(#49456e, #9096b9);
+
+    --step:     13px;
+    --step-2:   calc(var(--step) * 2);
+    --step-3:   calc(var(--step) * 3);
+    --ac0: #ff8533;
+    --ac1: #c45041;
+    --ac2: #ffc080;
+    --vc0: #ff8533;
+    
+}
+
+.theme-switcher {
+    justify-content:    center;
+    display:    flex;
+    gap:        8px;
+    margin-top: 12px;
+    width:      100%;
+}
+
+.theme-switcher input[type="radio"] {
+    display: none;
+}
+
+.theme-switcher label {
+    cursor:         pointer;
+    font-size:      var(--step);
+    line-height:    1;
+    padding:        4px 10px;
+    border:         1px solid var(--border2);
+    background:     var(--bg0);
+    color:          var(--fg0);
+    font-family:    "Cozette", monospace;
+    user-select:    none;
+}
+
+.theme-switcher label:hover {
+    background:     var(--fg0);
+    color:          var(--bg0);
+    border-color:   var(--bg0);
+}
+
+.theme-switcher input[type="radio"]:checked + label {
+    background:     var(--fg0);
+    color:          var(--bg0);
+    border-color:   var(--bg0);
+    box-shadow:     inset 2px 2px 0 var(--border2);
+}
+
+:root:has(#theme-light:checked) {
+    color-scheme:   light;
+    --bg0:      #9096b9;
+    --fg0:      #0e021e;
+    --cl0:      #49456e;
+    --border2:  #0e021e;
+
+}
+
+:root:has(#theme-dark:checked) {
+    color-scheme:    dark;
+    --bg0:      #0e021e;
+    --fg0:      #9096b9;
+    --cl0:      #49456e;
+    --border2:  #9096b9;
+}
+
+*, *::before,*::after{box-sizing:inherit}
+
+@media (resolution: 1dppx), (resolution: 2dppx), (resolution: 3dppx), (resolution: 4dppx) {
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        font-smooth: never;
+   }
+}
+
+@font-face {
+    font-family:    "Cozette";
+    font-style:     normal;
+    font-weight:    normal;
+    src: url("assets/fonts/CozetteVector.woff2") format("woff2");
+}
+@font-face {
+    font-family:    "Cozette";
+    font-style:     normal;
+    font-weight:    bold;
+    src: url("assets/fonts/CozetteVectorBold.woff2") format("woff2");
+}
+
+::selection {
+    background-color:   var(--cl0);
+               color:   var(--bg0);
+}
+
+html, body {
+    margin:     0;
+    box-sizing: border-box;
+
+    font-family:    "Cozette", monospace;
+    font-size:      var(--step);
+    font-style:     normal;
+    -webkit-text-size-adjust:   none;
+    text-size-adjust:           none;
+    -moz-osx-font-smoothing:    grayscale;
+    -webkit-font-smoothing:     none;
+    font-smooth:                never;
+
+    color:      var(--fg0);
+    background: var(--bg0) /*url("../assets/img/bg-img.png")*/;
+    filter:     contrast(100.00001%);
+}
+
+a:link {
+    color: var(--ac0);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--vc0);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--ac1);
+    text-decoration: none;
+}
+a:active {
+    color: var(--ac2);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: var(--step-3);
+    line-height: var(--step-3) 
+}
+h2 {
+    font-size: var(--step-2);
+    line-height: var(--step-2) 
+}
+
+.bweh {
+    margin:     auto;
+    display:    flex;
+    gap:        16px;
+    height:     100lvh;
+    flex-direction: column;
+}
+
+.window {
+    position:   relative;
+    background: var(--bg0);
+    padding:    16px 8px 8px;
+    margin:     0 16px;
+    border:     1px solid var(--border2);
+    max-width:  960px;
+}
+.window.login-window {
+    gap:        8px;
+    width:      320px;
+    margin:     120px auto 0;
+    padding:    var(--step-2);
+    box-shadow: 4px 4px 0 var(--border2);
+    overflow:   visible;
+    display:    flex;
+    flex-direction: column;
+    align-items:    center;
+}
+/* TODO: PLEASE MAKE THE REST OF THE CSS LOOK OK */
+.login-window h2 {
+    margin: 0;
+    font-size: var(--step);
+    line-height: var(--step);
+    text-align: center;
+}
+.login-form {
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.login-form label {
+    display: block;
+    font-size: var(--step);
+    line-height: var(--step);
+    text-transform: uppercase;
+}
+.login-form input, .login-form button {
+    width: 100%;
+    height: 28px;
+    padding: 4px 6px;
+    font-family: "Cozette", monospace;
+    font-size: var(--step);
+    line-height: var(--step);
+    border: 1px solid var(--border2);
+    border-radius: 0;
+    background: var(--bg0);
+    color: var(--fg0);
+    outline: none;
+}
+.login-form input::placeholder {
+    color: var(--cl0) 
+}
+.login-form input:hover::placeholder {
+    color: var(--fg0) 
+}
+.login-form input:hover {
+    background: var(--fg0);
+    color: var(--bg0);
+    border-color: var(--bg0);
+}
+.login-form button {
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.login-form button:hover {
+    background: var(--fg0);
+    color: var(--bg0);
+    border-color: var(--bg0);
+}
+.scanlines {
+    position: fixed; inset: 0;
+    width: 100vw; height: 100vh;
+    background: repeating-linear-gradient(to right, #0006, transparent 1px, transparent 2px, #0006 2px, #0006 3px);
+    z-index: 9999; pointer-events: none;
+    animation: flicker 0.1s infinite;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(transparent 0 2px, #fff1 2px 4px);
+    pointer-events: none; margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;height: 64px;
+    background: #000;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    text-align: center;
+}
+
+@keyframes flicker {
+    0%      {opacity: 0.82;}
+    25%     {opacity: 0.85;}
+    50%     {opacity: 0.87;}
+    75%     {opacity: 0.84;}
+    100%    {opacity: 0.89;}
+}
+
+@keyframes enter_name {
+    0.0%    { width: 0ch; }
+    5.0%    { width: 1ch; }
+    9.55%   { width: 2ch; }
+    16.5%   { width: 3ch; }
+    22.78%  { width: 4ch; }
+    27.22%  { width: 5ch; }
+    36.02%  { width: 6ch; }
+    45.50%  { width: 7ch; }
+    51.52%  { width: 8ch; }
+    61.47%  { width: 9ch; }
+    67.96%  { width: 10ch; }
+    73.52%  { width: 11ch; }
+    82.04%  { width: 12ch; }
+    88.08%  { width: 13ch; }
+    95.06%  { width: 14ch; }
+    100.0%  { width: 15ch; }
+    100.0%  { width: 15ch; }
+  }
+  
+
+  @keyframes secret {
+    0% { width: 0ch; }
+    1.00% { width: 0ch; }
+    2.95% { width: 1ch; }
+    4.35% { width: 2ch; }
+    8.10% { width: 3ch; }
+    10.33% { width: 4ch; }
+    13.88% { width: 5ch; }
+    20.11% { width: 6ch; }
+    24.96% { width: 7ch; }
+    27.25% { width: 8ch; }
+    33.14% { width: 9ch; }
+    36.32% { width: 10ch; }
+    44.61% { width: 11ch; }
+    47.52% { width: 12ch; }
+    50.51% { width: 13ch; }
+    57.67% { width: 14ch; }
+    63.71% { width: 15ch; }
+    71.72% { width: 16ch; }
+    81.81% { width: 17ch; }
+    84.97% { width: 18ch; }
+    89.76% { width: 19ch; }
+    100.00% { width: 20ch; }
+    100% { width: 20ch; }
+  }
+
+  .enter_name {
+    display:        inline-block;
+    overflow:       hidden;
+    white-space:    nowrap;
+    animation:      enter_name 2182ms steps(1,end) forwards;
+  }
+  .secret {
+    display:        inline-block;
+    overflow:       hidden;
+    white-space:    nowrap;
+    animation:      secret 3049ms steps(1,end) forwards;
+  }
+
+  .socials {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: socials 27695ms steps(1,end) forwards;
+  }
+
+  @keyframes socials {
+    0% { width: 0ch; }
+    0.00% { width: 1ch; }
+    0.87% { width: 2ch; }
+    0.89% { width: 3ch; }
+    1.98% { width: 4ch; }
+    2.44% { width: 5ch; }
+    4.41% { width: 6ch; }
+    5.07% { width: 7ch; }
+    5.75% { width: 8ch; }
+    6.42% { width: 9ch; }
+    7.90% { width: 10ch; }
+    11.39% { width: 11ch; }
+    12.57% { width: 12ch; }
+    14.32% { width: 13ch; }
+    15.29% { width: 14ch; }
+    16.10% { width: 15ch; }
+    16.72% { width: 16ch; }
+    17.26% { width: 17ch; }
+    17.52% { width: 18ch; }
+    18.05% { width: 19ch; }
+    18.53% { width: 20ch; }
+    19.18% { width: 21ch; }
+    19.50% { width: 22ch; }
+    20.01% { width: 23ch; }
+    20.26% { width: 24ch; }
+    22.70% { width: 25ch; }
+    23.56% { width: 26ch; }
+    24.42% { width: 27ch; }
+    25.52% { width: 28ch; }
+    25.81% { width: 29ch; }
+    26.97% { width: 30ch; }
+    27.45% { width: 31ch; }
+    28.20% { width: 32ch; }
+    28.52% { width: 33ch; }
+    29.41% { width: 34ch; }
+    31.00% { width: 35ch; }
+    32.43% { width: 36ch; }
+    34.91% { width: 37ch; }
+    45.48% { width: 38ch; }
+    46.03% { width: 39ch; }
+    46.61% { width: 40ch; }
+    46.98% { width: 41ch; }
+    47.39% { width: 42ch; }
+    49.31% { width: 43ch; }
+    49.80% { width: 44ch; }
+    50.73% { width: 45ch; }
+    51.15% { width: 46ch; }
+    58.37% { width: 47ch; }
+    63.46% { width: 48ch; }
+    64.56% { width: 49ch; }
+    65.79% { width: 50ch; }
+    66.23% { width: 51ch; }
+    66.68% { width: 52ch; }
+    67.03% { width: 53ch; }
+    67.63% { width: 54ch; }
+    68.12% { width: 55ch; }
+    68.47% { width: 56ch; }
+    69.55% { width: 57ch; }
+    70.40% { width: 58ch; }
+    71.81% { width: 59ch; }
+    72.94% { width: 60ch; }
+    74.11% { width: 61ch; }
+    74.60% { width: 62ch; }
+    74.98% { width: 63ch; }
+    75.44% { width: 64ch; }
+    75.89% { width: 65ch; }
+    76.15% { width: 66ch; }
+    76.69% { width: 67ch; }
+    76.95% { width: 68ch; }
+    78.51% { width: 69ch; }
+    83.11% { width: 70ch; }
+    85.54% { width: 71ch; }
+    86.25% { width: 72ch; }
+    90.89% { width: 73ch; }
+    91.46% { width: 74ch; }
+    92.21% { width: 75ch; }
+    94.28% { width: 76ch; }
+    95.35% { width: 77ch; }
+    95.95% { width: 78ch; }
+    96.54% { width: 79ch; }
+    100.00% { width: 80ch; }
+    100% { width: 80ch; }
+  }
+  
