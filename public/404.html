@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="assets/images/icon_heart.png">
+  <title>SYSTEM</title>
+  <style>
+
+::selection {background-color:#fff;color:#000;}
+    html, body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Cozette", monospace;
+      filter: contrast(100.00001%);
+      background: #000;
+      color: #fff;
+      font-size: 13px;
+      height: 100vh;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      text-align: center;
+    }
+    @font-face{
+      font-family:"Cozette";
+      font-style:normal;
+      font-weight:400;
+      src:url(assets/fonts/CozetteVector-SUBSET.woff2) format('woff2');
+      font-display:swap;
+      unicode-range:U+0000-024F
+    }
+    @font-face{
+      font-family:"Cozette";
+      font-style:normal;
+      font-weight:700;
+      src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');
+      font-display:swap;
+      unicode-range:U+0000-024F
+    }
+    h1 {
+        font-size: 13px;
+    }
+    .cursor {
+        display: inline-block;
+        animation: blink 1s steps(2, start) infinite;
+        font-weight: bold;
+        color: #fff;
+    }
+    @keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+    .ok { color: #0f0; }
+    .warning { color: #ff0; }
+    .error { color: #f00; }
+    .critical { color: #f00; font-weight: bold; }
+  </style>
+</head>
+<body>
+    <div style="text-align: left;"class="vm">
+        SYSTEM BOOT SEQUENCE INITIATED<br>
+        <br>
+        <br>
+        [<span class="ok">OK</span>] Kernel loaded successfully.<br>
+        [<span class="ok">OK</span>] Memory check passed: 16,777,216 bytes detected.<br>
+        [<span class="warning">WARNING</span>] Power supply: unstable voltage detected.<br>
+        [<span class="ok">OK</span>] CPU cores online: 2 @ 345.9Mhz.<br>
+        [<span class="warning">WARNING</span>] Unknown device 0xFA50 detected on bus 0.<br>
+        [<span class="critical">CRITICAL</span>] INFORMATION INACCESSIBLE<br>
+        [<span class="error">ERROR</span>] Resource allocation failed.<br>
+        [<span class="error">ERROR</span>] Attempting recovery sequence...<br>
+        [<span class="error">ERROR</span>] Attempting recovery sequence...<br>
+        [<span class="error">ERROR</span>] Attempting recovery sequence...<br>
+        [<span class="warning">WARNING</span>] Power supply: unstable voltage detected.<br>
+        [<span class="error">FAIL</span>] No recovery path available.<br>
+        [<span class="error">ERROR</span>] Rendering subsystem: unresponsive.<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="warning">WARNING</span>] Power supply: unstable voltage detected.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">ERROR</span>] Attempting system rescue sequence...<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="error">FAIL</span>] No rescue path available.<br>
+        [<span class="critical">CRITICAL</span>] SYSTEM HALT IMMINENT!<br>
+        [<span class="critical">CRITICAL</span>] SYSTEM HALT IMMINENT!<br>
+        [<span class="critical">CRITICAL</span>] SYSTEM HALT IMMINENT!<br>
+        <br>
+        unable to render requested resource.<br><br>
+        terminating session.<br>
+        <span class="cursor">|</span>
+      </div>
+
+  <script>
+    const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+    window.addEventListener("resize", fix);
+    fix();
+</script>
+</body>
+
+</html>
