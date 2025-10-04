@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="refresh" content="3.33;url=./mainpage">
+<link rel="icon" href="assets/images/icon_1bit.png">
+<title>SYSTEM</title>
+<style>
+    ::selection {background-color: #fff;color: #000;}
+
+    html, body {
+        margin: 0; background: #000; box-sizing: border-box; color: #fff;
+        font-family: "Cozette", monospace;
+        filter: contrast(100.00001%);
+        font-size: 13px;
+        height: 100vh;
+        display: flex; align-items: flex-start; justify-content: left;
+    }
+
+    @font-face {
+        font-family: "Cozette"; font-style: normal; font-weight: 400;
+        src: url(assets/fonts/CozetteVector-SUBSET.woff2) format('woff2');
+        font-display: swap; unicode-range: U+0000-024F
+    }
+
+    @font-face {
+        font-family: "Cozette"; font-style: normal; font-weight: 700;
+        src: url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');
+        font-display: swap; unicode-range: U+0000-024F
+    }
+
+    h1 { font-size: 13px; }
+
+    .cursor {
+        display: inline-block;
+        animation: blink 1s steps(2, start) infinite;
+        font-weight: bold; color: #fff;
+    }
+
+    @keyframes blink {0%,50% {opacity:1;}51%,100%{opacity:0;}}
+    .ok {color:#0f0;}
+    .warning {color:#ff0;}
+    .error {color:#f00;}
+    .critical {color:#f00;font-weight:bold;}
+    .line {opacity:0; animation: appear 0s forwards;}
+    @keyframes appear {from{opacity:0;}to{opacity:1;}}
+    .mobile-only { display: none; }
+    @media (max-width: 768px) { .mobile-only { display: block; } }
+</style>
+</head>
+<body>
+<div style="text-align:left;" class="vm">
+    <div class="line" style="animation-delay:0.45s">SYSTEM BOOT SEQUENCE INITIATED</div>
+    <br>
+    <div class="line" style="animation-delay:0.55s">[ <span class="ok">OK</span> ] CPU cores initialised: 3x cores @ 144.17MHz.</div>
+    <div class="line" style="animation-delay:0.63s">[ <span class="ok">OK</span> ] Memory online: 256,000 KiB</div>
+    <div class="line" style="animation-delay:0.69s">[ <span class="ok">OK</span> ] Memory parity check: PASSED</div>
+    <div class="line" style="animation-delay:0.85s">[ <span class="ok">OK</span> ] RTC synced: 2022-11-20 00:00:00</div>
+    <div class="line mobile-only" style="animation-delay:1.0s">[ <span class="ok">OK</span> ] Peripheral touchscreen detected.</div>
+    <div class="line mobile-only" style="animation-delay:1.11s">[ <span class="ok">OK</span> ] Accelerometer sensor online.</div>
+    <div class="line mobile-only" id="vibration-line" style="animation-delay:1.5s">[ <span class="ok">OK</span> ] Vibration motor online.</div>
+    <div class="line" style="animation-delay:1.55s">[ <span class="ok">OK</span> ] Thermal sensors initialised</div>
+    <div class="line" style="animation-delay:1.63s">[ <span class="ok">OK</span> ] Cartridge inserted: PAGE-0x1</div>
+    <div class="line" style="animation-delay:1.65s">[ <span class="ok">OK</span> ] Voltage regulation stable</div>
+    <br>
+    <div class="line" style="animation-delay:1.7s">[ <span class="ok">OK</span> ] LOADED FIRMWARE "ALPHA-0.1". PROCEED.<br>
+    <div class="line" style="animation-delay:1.75s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:1.80s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:1.82s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:1.83s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    
+    
+    
+    <br>
+    <div class="line" style="animation-delay:1.85s">[ <span class="ok">OK</span> ] Fan control online</div>
+    <div class="line" style="animation-delay:1.91s">[ <span class="ok">OK</span> ] All systems stable.</div>
+    <div class="line" style="animation-delay:1.99s">[ <span class="ok">OK</span> ] Boot sequence completed successfully.</div>
+    <div class="line" style="animation-delay:2.0s">[ <span class="warning">INFO</span> ] "ROSE-BOOT" (rev 0.2)</div>
+    <div class="line mobile-only" style="animation-delay:2.12s">[ <span class="ok">OK</span> ] Camera sensor online</div>
+    <div class="line mobile-only" style="animation-delay:2.20s">[ <span class="ok">OK</span> ] GPS module online</div>
+    <div class="line" style="animation-delay:2.45s">[ <span class="ok">OK</span> ] System integrity check: PASS</div>
+    <div class="line" style="animation-delay:2.60s">[ <span class="ok">OK</span> ] Disk health check: SECTOR OK, 0x0000..0xFFFF</div>
+    <div class="line" style="animation-delay:2.65s">[ <span class="ok">OK</span> ] Network interface: ONLINE</div>
+    
+    <div class="line" style="animation-delay:2.75s">redirecting to main interface...</div>
+    <br>
+    <br>
+    <div class="line" style="animation-delay:2.81s">©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.</div>
+    <br>
+    <div class="line" style="animation-delay:2.82s">NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION.</div>
+    <br>
+    <div class="line" style="animation-delay:2.83s">NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.</div>
+    <br>
+    <div class="line" style="animation-delay:2.84s">ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.</div>
+
+    <div class="line" style="animation-delay:3.050s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.070s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.080s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.090s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.090s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.095s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.095s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.099s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.099s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.099s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.099s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.159s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.159s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.159s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.159s">TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</div>
+    <div class="line" style="animation-delay:3.169s">rosa@skele.fyi:<span class="cursor">|</span></div>
+    
+
+</div>
+
+</body>
+</html>

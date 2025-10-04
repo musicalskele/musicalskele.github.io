@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="../assets/images/icon_heart.png">
+  
+  <title>PROGRAM</title>
+  <style>html,body{margin:0;box-sizing:border-box;font-family:"Cozette", monospace;
+  filter:contrast(100.00001%);background:#0e021e;color:#9096b9;font-size:13px;}</style>
+  <style>
+  @font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
+  @font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}</style>
+  <link rel="preload" href="../assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+  <style>.bweh{margin:auto;display:flex;gap:16px;height:100lvh;flex-direction:column}.window{position:relative;padding:16px 8px 8px;margin:0 16px;border:1px solid #9096b9;max-width:960px}</style>
+  <style>.window.login-window{gap:8px;width:320px;margin:120px auto 0;padding:var(--step-2);box-shadow:4px 4px 0 #9096b9;overflow:visible;display:flex;flex-direction:column;align-items:center}</style>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <main class="bweh centerx">
+        <div class="scanlines"></div>
+        <div class="overlay"></div>
+        <header class="window-retro" style="max-width: 600px; height: 10em; image-rendering: pixelated; ">
+            <div class="titlebar">
+                <span>/home/rosa/</span>
+                <span class="close" aria-hidden="true">x</span>
+            </div>
+            <picture style="position: absolute; left: 50%; transform: translateX(-50%);">
+                <img class="centerd" src="../assets/images/icon_heart.png" alt="i spent way too long on this." height="96px">
+            </picture>
+        </header>
+        <div class="grid-windows">
+            <div class="window-retro main-panel">
+              <div class="titlebar">
+                <span>/home/rosa/introductions</span>
+                <span class="close" aria-hidden="true">x</span>
+              </div>
+              <div>
+                <p>
+            ✦ || i'm roza! im bi & enby<br>
+            ✧ || an artist and a programmer, i love rust :3<br>
+            ✦ || my birthday is MEOW<br>
+            ✧ || i mostly play minecraft & ultrakill<br>
+            ✧ || free palestine<br>
+                </p>
+              </div>
+            </div>
+          
+            <div class="side-windows">
+              <div class="window-retro side-panel">
+                <div class="titlebar">
+                  <span>/home/rosa/ineedtoputsomethinghere</span>
+                  <span class="close" aria-hidden="true">x</span>
+                </div>
+                <div>
+                  -- FIND SOMETHING TO PUT HERE-->
+                </div>
+              </div>
+          
+              <div class="window-retro side-panel">
+                <div class="titlebar">
+                  <span>/home/rosa/sadasdasdgfd</span>
+                  <span class="close" aria-hidden="true">x</span>
+                </div>
+                <div>
+                  <p>visit my github! https://github.com/musicalskele</p>
+                </div>
+              </div>
+            </div>
+            
+            <div style="width:min-content; padding: 0;" class="window-retro third-panel">
+              <div class="titlebar">
+                <span>/home/rosa/ad</span>
+                <span class="close" aria-hidden="true">x</span>
+              </div>
+            <div style="padding: 0px; display: flex; justify-content: center; align-items: center;">
+              <iframe width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-retro">
+            <div class="titlebar">
+                <span>/home/rosa/display.conf</span>
+                <span class="close" aria-hidden="true">x</span>
+            </div>
+            <div class="theme-switcher">
+                <label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
+                <label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
+                <label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
+            </div>
+          </div>
+        </div>
+      </main>
+  <footer>
+    <p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
+      NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
+      ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
+      TYPEFACE <a href="../https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="../https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
+      OPERATING α-0.1</p>
+  </footer>
+  <script>
+    const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+    window.addEventListener("resize", fix);
+    fix();
+</script>
+<style>
+  @font-face {
+      font-family: "Cozette";
+      font-style: normal;
+      font-weight: normal;
+      src: url("../assets/fonts/CozetteVector.woff2") format("woff2");
+      font-display: swap;
+  }
+  @font-face {
+      font-family: "Cozette";
+      font-style: normal;
+      font-weight: bold;
+      src: url("../assets/fonts/CozetteVectorBold.woff2") format("woff2");
+      font-display: swap;
+  }
+  </style>
+</body>
+</html>
