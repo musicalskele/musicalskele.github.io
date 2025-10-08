@@ -1,5 +1,11 @@
 temp_ico_sizes/
+beep.py
 typer.py
 generate_favicon.py
 heart.ico
 icon_heart.ico
+temp_beep.wav
+beep.wav
+public/assets/audio/beep.wav
+public/assets/audio/beepd.wav
+public/nowhere.html
