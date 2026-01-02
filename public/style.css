@@ -396,6 +396,7 @@ img.heart {
         white-space: nowrap;
         overflow: hidden;
         filter: grayscale(0.3);
+        image-rendering: pixelated;
     }
     & img:hover {
         filter: grayscale(0);
