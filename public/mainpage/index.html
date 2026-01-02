@@ -1,141 +1,192 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="icon" href="../assets/images/icon_heart.png">
-  
-  <title>PROGRAM</title>
-  <style>html,body{margin:0;box-sizing:border-box;font-family:"Cozette", monospace;
-  filter:contrast(100.00001%);background:#0e021e;color:#9096b9;font-size:13px;}</style>
-  <style>
-  @font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
-  @font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}</style>
-  <link rel="preload" href="../assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
-  <style>.bweh{margin:auto;display:flex;gap:16px;height:100lvh;flex-direction:column}.window{position:relative;padding:16px 8px 8px;margin:0 16px;border:1px solid #9096b9;max-width:960px}</style>
-  <style>.window.login-window{gap:8px;width:320px;margin:120px auto 0;padding:var(--step-2);box-shadow:4px 4px 0 #9096b9;overflow:visible;display:flex;flex-direction:column;align-items:center}</style>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <main class="bweh centerx">
-    <div class="scanlines"></div>
-    <div class="overlay"></div>
-    <header class="window-retro" style="max-width: 600px; min-height: 10em; height: 10em; image-rendering: pixelated; ">
-      <div class="titlebar"><span>/home/rosa/</span><span class="close" aria-hidden="true">x</span></div>
-      <picture style="position: absolute; left: 50%; transform: translateX(-50%);"><img class="centerd" src="../assets/images/icon_heart.png" alt="i spent way too long on this." height="96px"></picture>
-    </header>
-    <div class="grid-windows">
-      <div class="window-retro main-panel">
-        <div class="titlebar"><span>/home/rosa/introductions</span><span class="close" aria-hidden="true">x</span></div>
-        <div>
-          <p> HIIIIIII! i'm rosa, a non-binary trans woman living in the middle east. welcome to my tiny <span class="dark-text">(&lt;1mb)</span> website!<br>
-            i usually spend my time playing games and coding random things!!<br>
-            rust is my favorite programming language :3<br>
-            i use fedora on my laptop! i also have a few raspberry pi's laying around!! i like linux. and kde. kde is good.<br>
-          </p>
-        </div>
-      </div>
-      <div class="side-windows">
-        <div class="window-retro side-panel">
-          <div class="titlebar"><span>/home/rosa/contact.txt</span><span class="close" aria-hidden="true">x</span></div>
-          <div>
-            <b>discord:</b><a href="https://discordapp.com/users/292909491593150464" target="_blank"> @musicalskele</a><br>
-            <br>
-            <b>bluesky:</b><a href="https://bsky.app/profile/skele.fyi" target="_blank"> @skele.fyi</a><br>
-            <br>
-            <b>github :</b><a href="https://github.com/musicalskele" target="_blank"> musicalskele</a><br>
-            <br>
-            <b>twitter:</b><a href="https://twitter.com/rosakedi" target="_blank"> @rosakedi (private)</a><br>
-            <b>twitter:</b><a href="https://twitter.com/skelefyi" target="_blank"> @skelefyi (for ragebaiting)</a><br>
-          </div>
-          <div id="discord-widget-box" style="margin-top: 8px; border-top: 1px solid #9096b9; padding-top: 6px;">
-            <p>LOADING INFORMATION... WON'T WORK WITHOUT JAVASCRIPT.</p>
-          </div>
-        </div>
-        <div class="window-retro side-panel">
-          <div class="titlebar"><span>/home/rosa/badges</span><span class="close" aria-hidden="true">x</span></div>
-          <div>
-            <section id="buttons"><a href="https://skele.fyi/"><img src="../assets/88x31/skelefyi.gif" alt="my button">
-              </a><a href="#"><img src="../assets/88x31/e2vial.gif" alt="powered by estrogen (vial)"></a>
-              <a href="#"><img src="../assets/88x31/miku.gif" alt="this site is miku approved!"></a>
-            </section>
-            <div>
-              <p style="margin-bottom: 0px;">add my button to ur website :3 i'd like it if you told me about it!<br>also pls hotlink it <3</p><br>
-              <textarea style="width:155px; max-width: 255px; min-width:128px; height: 80px; max-height: 96px; min-height: 64px;
-                  font-family: Cozette; font-size: 13px; background-color: black; border-radius:0; border-width: 1px; border-color: white;color: white;" readonly="">&lt;a href="https://skele.fyi/" target="_blank"&gt;&lt;img src="https://skele.fyi/88x31.gif"&gt;&lt;/a&gt;</textarea><br>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="width:min-content; padding: 0;" class="window-retro third-panel">
-        <div class="titlebar"><span>/home/rosa/ad</span><span class="close" aria-hidden="true">x</span></div>
-        <div style="margin-top: 16px; display: flex; justify-content: center; align-items: center;"><iframe width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
-      </div>
-    </div>
-    <div class="window-retro">
-      <div class="titlebar"><span>/home/rosa/display.conf</span><span class="close" aria-hidden="true">x</span></div>
-      <div class="theme-switcher">
-        <label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
-        <label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
-        <label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
-      </div>
-    </div>
-    </div>
-  </main>
-  <footer>
-    <p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
-      NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
-      ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
-      TYPEFACE <a href="../https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="../https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
-      OPERATING α-0.1</p>
-  </footer>
-  <script>
-    const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
-    window.addEventListener("resize", fix);
-    fix();
-  </script>
-  <style>
-    @font-face {
-      font-family: "Cozette";
-      font-style: normal;
-      font-weight: normal;
-      src: url("../assets/fonts/CozetteVector.woff2") format("woff2");
-      font-display: swap;
-    }
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="../assets/images/icon_heart.png">
+		<title>PROGRAM</title>
+		<style>html,body{margin:0;box-sizing:border-box;font-family:"Cozette", monospace;
+		  filter:contrast(100.00001%);background:#0e021e;color:#9096b9;font-size:13px;}
+		</style>
+		<style>
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}
+		</style>
+		<link rel="preload" href="../assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<style>.bweh{margin:auto;display:flex;gap:16px;height:100lvh;flex-direction:column}.window{position:relative;padding:16px 8px 8px;margin:0 16px;border:1px solid #9096b9;max-width:960px}</style>
+		<style>.window.login-window{gap:8px;width:320px;margin:120px auto 0;padding:var(--step-2);box-shadow:4px 4px 0 #9096b9;overflow:visible;display:flex;flex-direction:column;align-items:center}</style>
+		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+		<main class="bweh centerx">
+			<div class="scanlines"></div>
+	  	<div class="overlay"></div>
+			<header class="window-retro" style="max-width: 600px; min-height: 10em; height: 10em; image-rendering: pixelated; ">
+				<div class="titlebar"><span>/home/rosa/</span><span class="close" aria-hidden="true">x</span></div>
+				<picture style="position: absolute; left: 50%; transform: translateX(-50%);"><img class="centerd" src="../assets/images/icon_heart.png" alt="i spent way too long on this." height="96px"></picture>
+			</header>
+			<div class="grid-windows">
+				<div class="window-retro main-panel">
+					<div class="titlebar"><span>/home/rosa/introductions</span><span class="close" aria-hidden="true">x</span></div>
+					<div class="rosa-info">
+						<p>
+							HIIIIIII! i'm rosa, an enby catgirl :3 <br>welcome to my tiny <span class="dark-text">(&lt;1mb)</span> website!<br>
+							i usually spend my time playing games and coding rand	om things,<br>
+							i use fedora with kde on my laptop! kde is good.<br>
+							<br><br>
+							<strong>games i like:</strong>
+							<ul>
+								<li>minecraft</li>
+								<li>ultrakill</li>
+								<li>undertale/deltarune</li>
+								<li>thats about it</li>
+								<li>idk</li>
+							</ul>
+							<strong>languages i know:</strong>
+							<ul>
+								<li>rust (my favorite so far)</li>
+								<li>python</li>
+								<li>javaScript (kinda)</li>
+								<li>a tiny... bit of c</li>
+								<li>html & css</li>
+								<li>rly basic bash</li>
+								<li>english</li>
+							</ul>
+						</p>
+					</div>
+					<div style="justify-content:center; align-items: center; display: flex;">
+					<img src="../assets/images/flg_pse.png" alt=""><img src="../assets/images/flg_trby.png" alt="">
+					</div>
+				</div>
+				<div class="side-windows">
+					<div class="window-retro side-panel">
+						<div class="titlebar"><span>/home/rosa/contact</span><span class="close" aria-hidden="true">x</span></div>
+						<div>
+							<b>discord:</b><a href="https://discordapp.com/users/292909491593150464" target="_blank"> @musicalskele</a><br>
+							<br>
+							<b>bluesky:</b><a href="https://bsky.app/profile/skele.fyi" target="_blank"> @skele.fyi</a><br>
+							<br>
+							<b>github :</b><a href="https://github.com/musicalskele" target="_blank"> musicalskele</a><br>
+							<br>
+							<b>twitter:</b><a href="#" target=""> considering quitting it tbh</a><br>
+						</div>
+						<div id="discord-widget-box" style="margin-top: 8px; border-top: 1px solid #9096b9; padding-top: 6px;">
+							<p>REWORKING THE DISCORD WIDGET BOX.<br>PLEASE BE PATIENT.</p>
+						</div>
+					</div>
+					<div class="window-retro side-panel">
+						<div class="titlebar"><span>/home/rosa/badges</span><span class="close" aria-hidden="true">x</span></div>
+						<div>
+							<section id="buttons">
+								<a href="https://skele.fyi/"><img src="../88x31.gif" alt="my button :3"></a>
+								<a href="https://classic9x.neocities.org/" target="_blank" rel="noopener"><img src="../assets/88x31/classic9x.png" alt="classic9x"></a>
+								<a href="https://witchfuneral.quest/" target="_blank" rel="noopener"><img src="../assets/88x31/witchfuneral.png" alt="witch funeral"></a>
+								<a href="#"><img src="../assets/88x31/e2vial.gif" alt="powered by estrogen (vial)"></a>
+								<a href="#"><img src="../assets/88x31/miku.gif" alt="this website is miku approved!"></a>
+							</section>
 
-    @font-face {
-      font-family: "Cozette";
-      font-style: normal;
-      font-weight: bold;
-      src: url("../assets/fonts/CozetteVectorBold.woff2") format("woff2");
-      font-display: swap;
-    }
-  </style>
-<script>
-  (async () => {
-    const box = document.getElementById("discord-widget-box");
-    const id = "1356633478631788845";
-    async function update() {
-      try {
-        const res = await fetch(`https://discord.com/api/guilds/${id}/widget.json?nocache=${Date.now()}`);
-        if (!res.ok) throw new Error();
-        const d = await res.json();
-        const t = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
-        box.innerHTML = `
-          <div style="border:1px solid #9096b9;padding:6px;margin-top:4px;line-height:1;">
-            <b>${d.name ?? "HOW CURIOUS."}</b><br>
-            <span style="color:#2a2">❱</span> ${d.presence_count ?? 0} online<br>
-            ${d.instant_invite ? `<a href="${d.instant_invite}" target="_blank">join my server :3</a><br>` : ""}
-            <!--<span>last updated: ${t}</span>-->
-          </div>`;
-      } catch {
-        box.innerHTML = `<div style="border:1px solid #9096b9;padding:6px;margin-top:4px;line-height:2;"><p>SOMETHING VERY UNFORTUNATE HAPPENED.</p></div>`;
-      }
-    }
-    update();
-    setInterval(update, 60000);
-  })();
-  </script>
-</body>
+							<div>
+								<p style="margin-bottom: 0px;">add my button to ur website :3 i'd like it if you told me about it!<br>also pls hotlink it &lt3</p>
+								<br>
+								<textarea style="width:155px; max-width: 255px; min-width:128px; height: 80px; max-height: 96px; min-height: 64px;
+									font-family: Cozette; font-size: 13px; background-color: black; border-radius:0; border-width: 1px; border-color: white;color: white;" readonly="">&lt;a href="https://skele.fyi/" target="_blank"&gt;&lt;img src="https://skele.fyi/88x31.gif"&gt;&lt;/a&gt;</textarea>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="width:min-content; padding: 0;" class="window-retro third-panel">
+					<div class="titlebar"><span>/home/rosa/ad.html</span><span class="close" aria-hidden="true">x</span></div>
+					<div style="margin-top: 16px; display: flex; justify-content: center; align-items: center;"><iframe width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
+				</div>
+			</div>
+			<div class="window-retro">
+				<div class="titlebar"><span>/home/rosa/display.conf</span><span class="close" aria-hidden="true">x</span></div>
+				<div class="theme-switcher">
+					<label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
+					<label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
+					<label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
+				</div>
+			</div>
+			</div>
+			
+		</main>
+		
+		<footer> 
+			<p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
+				NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
+				ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
+				TYPEFACE <a href="https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
+				OPERATING α-0.1 <span id="commit-info"></span>
+			</p>
+		</footer>
+		<div id="clicker-game">
+			<div class="game-box">
+				<h2>/home/rosa/clicker</h2>
+				<img id="clicker-img" src="../assets/images/rosa.png" alt="click me">
+				<div>
+					<p style="margin: 0;">CLICKS:</p>
+					<p id="click-counter" style="margin: 4px 0;">0</p>
+				</div>
+				<a href="#" class="clicker-close">CLOSE</a>
+			</div>
+		</div>
+		<link rel="stylesheet" href="../assets/css/clicker.css">
+		<script src="../assets/js/clicker-game.js"></script>
+		<script>
+			const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+			window.addEventListener("resize", fix);
+			fix();
+		</script>
+		<style>
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: normal;
+			src: url("../assets/fonts/CozetteVector.woff2") format("woff2");
+			font-display: swap;
+			}
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: bold;
+			src: url("../assets/fonts/CozetteVectorBold.woff2") format("woff2");
+			font-display: swap;
+			}
+		</style>
+		<script>
+
+		</script>
+		<script>
+			const owner = "musicalskele";
+			const repo =  "musicalskele.github.io";
+			
+			async function addCommitInfo() {
+				try {
+					const res  = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`);
+					const data = await res.json();
+					const commit = data[0];
+
+					const sha = commit.sha.slice(0, 7);
+					const url = commit.html_url;
+					const date = new Date(commit.commit.author.date).toLocaleDateString();
+
+					document.getElementById("commit-info").innerHTML = `| <a href="${url}" target="_blank"> ${sha}</a> ${date}`;
+				} catch (err) {
+					console.error("CANNOT REACH THE COMMITS:", err);
+				}
+			}
+
+			addCommitInfo();
+		</script>
+		<script>
+		window.onkeydown = e => {
+		if (e.key.toLowerCase() === "u") {
+			const o = document.querySelector(".scanlines");
+			o.style.display = o.style.display === "none" ? "" : "none";
+		}
+		};
+		</script>
+	</body>
 </html>

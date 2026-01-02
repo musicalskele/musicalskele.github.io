@@ -1,70 +1,91 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="icon" href="assets/images/icon_heart.png">
-  
-  <title>AUTHORIZE</title>
-  <style>html,body{margin:0;box-sizing:border-box;font-family:"Cozette", monospace;
-  filter:contrast(100.00001%);background:#0e021e;color:#9096b9;font-size:13px;}</style>
-  <style>
-  @font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
-  @font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}</style>
-  <link rel="preload" href="assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
-  <style>.bweh{margin:auto;display:flex;gap:16px;height:100lvh;flex-direction:column}.window{position:relative;padding:16px 8px 8px;margin:0 16px;border:1px solid #9096b9;max-width:960px}</style>
-  <style>.window.login-window{gap:8px;width:320px;margin:120px auto 0;padding:var(--step-2);box-shadow:4px 4px 0 #9096b9;overflow:visible;display:flex;flex-direction:column;align-items:center}</style>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="bweh">
-    <div class="scanlines"></div>
-    <div class="overlay"></div>
-    <div class="window login-window fade-in">
-      <img class="heart" alt="heart">
-      <form class="login-form" novalidate>
-        <label for="usrname"><span class="enter_name">ENTER YOUR NAME</span></label>
-        <input type="text" id="usrname" name="usrname" placeholder="username">
-        <label for="pwd"><span class="secret">WHAT IS YOUR SECRET?</span></label>
-        <input type="password" id="pwd" name="pwd" placeholder="password">
-        <button type="button" onclick="window.location.href='404.html'">ENTER</button>
-        <button type="button" onclick="window.location.href='200.html'">GUEST LOGIN</button>
-      </form>
-      <div class="theme-switcher">
-        <label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
-        <label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
-        <label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
-      NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
-      ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
-      TYPEFACE <a href="https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
-      <a style="color:#181818">OPERATING α-0.1 | TURN AWAY FROM THE LIGHT. CLOSE YOUR EYES AND SPEAK NO WORD. KEEP SILENCE. AVOID THE LIGHT. SPEAK NOT A WORD.</a></p>
-  </footer>
-  <script>
-    const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
-    window.addEventListener("resize", fix);
-    fix();
-</script>
-<style>
-  @font-face {
-      font-family: "Cozette";
-      font-style: normal;
-      font-weight: normal;
-      src: url("assets/fonts/CozetteVector.woff2") format("woff2");
-      font-display: swap;
-  }
-  @font-face {
-      font-family: "Cozette";
-      font-style: normal;
-      font-weight: bold;
-      src: url("assets/fonts/CozetteVectorBold.woff2") format("woff2");
-      font-display: swap;
-  }
-  </style>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="./assets/images/icon_heart.png">
+		<title>AUTHORIZE</title>
+		<style>html,body{margin:0;box-sizing:border-box;font-family:"Cozette", monospace;
+			filter:contrast(100.00001%);background:#0e021e;color:#9096b9;font-size:13px;}
+		</style>
+		<style>
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}
+		</style>
+		<link rel="preload" href="assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<style>.bweh{margin:auto;display:flex;gap:16px;height:100lvh;flex-direction:column}.window{position:relative;padding:16px 8px 8px;margin:0 16px;border:1px solid #9096b9;max-width:960px}</style>
+		<style>.window.login-window{gap:8px;width:320px;margin:120px auto 0;padding:var(--step-2);box-shadow:4px 4px 0 #9096b9;overflow:visible;display:flex;flex-direction:column;align-items:center}</style>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main class="bweh">
+			<div class="scanlines"></div>
+			<div class="overlay"></div>
+			<div class="window login-window fade-in">
+				<img class="heart" alt="heart">
+				<form class="login-form" novalidate action="#incorrect">
+					<label for="usrname"><span class="enter_name">ENTER YOUR NAME</span></label>
+					<input type="text" id="usrname" name="usrname" placeholder="username">
+					<label for="pwd"><span class="secret">WHAT IS YOUR SECRET?</span></label>
+					<input type="password" id="pwd" name="pwd" placeholder="password">
+
+					<button type="submit">ENTER</button>
+					<button type="button" onclick="location.href='./mainpage/'">GUEST LOGIN</button>
+				</form>
+
+				<div class="theme-switcher">
+					<label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
+					<label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
+					<label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
+				</div>
+			</div>
+		</main>
+
+		<div id="incorrect" role="dialog" aria-labelledby="incorrect-title" aria-modal="true">
+			<div class="dialog">
+				<h2 id="incorrect-title">INCORRECT.</h2>
+				<p>your credentials were not accepted.</p>
+				<a class="close" id="incorrect-ok" href="#">OK</a>
+			</div>
+		</div>
+
+		<footer>
+			<p>©2021-2025 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
+				NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
+				ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
+				TYPEFACE <a href="https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
+				OPERATING α-0.1 <span id="commit-info"></span>
+			</p>
+		</footer>
+		<script>
+			const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+			window.addEventListener("resize", fix);fix();
+		</script>
+		<script>
+			document.getElementById("incorrect-ok").addEventListener("click", (e) => {
+				e.preventDefault();
+				if   (Math.random() < 0.22){
+					  location.href = "./where/";} 
+				else {location.hash = "";}
+			});
+		</script>
+
+		<style>
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: normal;
+			src: url("assets/fonts/CozetteVector.woff2") format("woff2");
+			font-display: swap;
+			}
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: bold;
+			src: url("assets/fonts/CozetteVectorBold.woff2") format("woff2");
+			font-display: swap;
+			}
+		</style>
+	</body>
 </html>

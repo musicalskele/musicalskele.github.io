@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>...</title>
+    <style>body {margin: 0;background: #000;}</style>
+</head>
+<body>
+<script>
+
+   const ctx = new(AudioContext || webkitAudioContext)();
+
+   const bufferLength = 20 * ctx.sampleRate;
+   const buffer = ctx.createBuffer(1, bufferLength, ctx.sampleRate);
+   const data = buffer.getChannelData(0);
+
+   for (let i = 0; i < bufferLength; i++) {
+   	data[i] = (Math.random() * 2 - 1) * 0.14;
+   }
+
+   const gain = ctx.createGain();
+   const filter = ctx.createBiquadFilter();
+   filter.type = "lowpass";
+
+   addEventListener(
+   	"click",
+   	() => {
+   		const noise = ctx.createBufferSource();
+   		noise.buffer = buffer;
+   		noise.loop = true;
+
+   		noise
+   			.connect(filter)
+   			.connect(gain)
+   			.connect(ctx.destination);
+   		noise.start();
+
+   		const now = ctx.currentTime;
+
+   		gain.gain.setValueAtTime(0, now);
+   		gain.gain.linearRampToValueAtTime(1, now + 20);
+
+   		filter.frequency.setValueAtTime(200, now);
+   		filter.frequency.exponentialRampToValueAtTime(600, now + 2);
+   	}, { once: true }
+   );
+
+</script>
+</body>
+</html>

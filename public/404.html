@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<meta http-equiv="refresh" content="13;url=./">
+<meta http-equiv="refresh" content="5.9;url=./">
 <link rel="icon" href="assets/images/icon_1bit.png">
 <title>SYSTEM</title>
 <style>
@@ -50,68 +50,25 @@
 </style>
 </head>
 <body>
-    <body>
-        <div style="text-align: left;" class="vm">
-            <div class="line" style="animation-delay:0.55s">SYSTEM BOOT SEQUENCE INITIATED</div>
-            <br>
-            <div class="line" style="animation-delay:0.75s">[ <span class="ok">OK</span> ] CPU cores initialised: 3x cores @ 144.17MHz.</div>
-            <div class="line" style="animation-delay:1.23s">[ <span class="ok">OK</span> ] Memory online: 256,000 KiB</div>
-            <div class="line" style="animation-delay:1.65s">[ <span class="ok">OK</span> ] RTC synced: 0000-00-00 00:00:00</div>
-            <div class="line mobile-only" style="animation-delay:1.9s">[ <span class="ok">OK</span> ] Peripheral touchscreen detected.</div>
-            <div class="line" style="animation-delay:2.0s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 57°C</div>
-            <div class="line mobile-only" style="animation-delay:2.1s">[ <span class="ok">OK</span> ] Accelerometer sensor online.</div>
-            <div class="line" style="animation-delay:2.3s">[ <span class="ok">OK</span> ] Cartridge inserted: PAGE-0x1</div>
-            <div class="line" style="animation-delay:2.9s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 69°C</div>
-            <div class="line mobile-only" style="animation-delay:3.4s">[ <span class="warning">WARNING</span> ] Touch input jitter detected.</div>
-            <div class="line mobile-only" id="vibration-line" style="animation-delay:3.5s">[ <span class="ok">OK</span> ] Vibration motor online.</div>
-            <div class="line" style="animation-delay:3.8s">[ <span class="warning">WARNING</span> ] Cartridge header: format unrecognised.</div>
-            
-            <div class="line" style="animation-delay:4.2s">[ <span class="error">ERROR</span> ] Compatibility check: expected CARTv3, found CARTv2</div>
-            <div class="line" style="animation-delay:4.9s">[ <span class="warning">WARNING</span> ] Cartridge metadata: inconsistent checksum.</div>
-            <div class="line" style="animation-delay:5.0s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 0°C</div>
-            <div class="line" style="animation-delay:5.12s">[ <span class="warning">WARNING</span> ] Unstable voltage detected.</div>
-            
-            
-            <div class="line" style="animation-delay:5.13s">[ <span class="error">ERROR</span> ] Memory corruption in page table 0x102F..0x112A.</div>
-            <div class="line" style="animation-delay:5.33s">[ <span class="error">ERROR</span> ] Memory corruption in page table 0x85AD..0x9FFF.</div>
-            <div class="line" style="animation-delay:5.45s">[ <span class="error">ERROR</span> ] Memory corruption in page table 0xAFFF..0xB00B.</div>
-            <div class="line" style="animation-delay:5.8s">[ <span class="warning">WARNING</span> ] Disk latency high: sector scan in progress</div>
-            <div class="line" style="animation-delay:6.26s">[ <span class="error">ERROR</span> ] Memory corruption in page table 0xDEAD..0xDEED.</div>
-            <div class="line" style="animation-delay:6.29s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 79°C</div>
-            <div class="line" style="animation-delay:6.32s">[ <span class="critical">CRITICAL</span> ] Page table corruption detected at 0x102F..0x112A. System recovery required.</div>
-            <div class="line" style="animation-delay:6.52s">[ <span class="critical">CRITICAL</span> ] Page table corruption detected at 0x85AD..0x9FFF. System recovery required.</div>
-            <div class="line" style="animation-delay:6.55s">[ <span class="warning">WARNING</span> ] Unstable voltage detected.</div>
-            <div class="line" style="animation-delay:6.66s">[ <span class="critical">CRITICAL</span> ] Page table corruption detected at 0xAFFF..0xB00B. System recovery required.</div>
-            <div class="line" style="animation-delay:6.75s">[ <span class="critical">CRITICAL</span> ] Page table corruption detected at 0xDEAD..0xDEED. System recovery required.</div>
-            <br>
-            <div class="line" style="animation-delay:7.2s">[ <span class="ok">OK</span> ] Fan control online</div>
-            <div class="line" style="animation-delay:7.29s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 99°C</div>
-            <div class="line" style="animation-delay:7.45s">[ <span class="warning">WARNING</span> ] Ambient temperature rising unusually fast.</div>
-            <div class="line mobile-only" style="animation-delay:7.9s">[ <span class="warning">WARNING</span> ] Touch input not responding… observing.</div>
-            <div class="line" style="animation-delay:8.29s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 127°C</div>
-            <div class="line" style="animation-delay:8.45s">[ <span class="critical">CRITICAL</span> ] SYSTEM HALT IMMINENT.</div>
-        
-            <div class="line" style="animation-delay:8.5s">[ <span class="warning">WARNING</span> ] I/O late retry.</div>
-        
-            <div class="line" style="animation-delay:9.29s">[ <span class="warning">WARNING</span> ] Unstable thermal reading: sensor 0x3B reports 127°C</div>
-            <div class="line" style="animation-delay:9.3s">[ <span class="error">FAIL</span> ] Write failed. Medium corrupted.</div>
-            <div class="line" style="animation-delay:9.5s">[ <span class="warning">WARNING</span> ] I/O late retry.</div>
-            <div class="line" style="animation-delay:9.6s">[ <span class="error">FAIL</span> ] Fan control unsuccessful.</div>
-            
-            <div class="line" style="animation-delay:9.7s">[ <span class="critical">CRITICAL</span> ] SYSTEM HALT COMPLETE.</div>
-            <br><br>
-          
-            <div class="line" style="animation-delay:10.71s">unable to render resource.</div>
-            <div class="line" style="animation-delay:11.36s">terminating session.</div>
-            <div class="line" style="animation-delay:11.96s">rosa@skele.fyi:<span class="cursor">|</span></div>
-            
-          </div>
-          
-        <script>
-            const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
-            window.addEventListener("resize", fix);
-            fix();
-            
-        </script>
-    </body>
+<div style="text-align:left;" class="vm">
+    <div class="line" style="animation-delay:0.45s">SYSTEM BOOT SEQUENCE INITIATED</div>
+    <br>
+    <div class="line" style="animation-delay:0.55s">[ <span class="ok">OK</span> ] CPU cores initialised: 3x cores @ 144.17MHz.</div>
+    <div class="line" style="animation-delay:0.63s">[ <span class="ok">OK</span> ] Memory online: 256,000 KiB</div>
+    <div class="line" style="animation-delay:0.85s">[ <span class="ok">OK</span> ] RTC synced: 2022-11-20 00:00:00</div>
+    <div class="line mobile-only" style="animation-delay:1.0s">[ <span class="ok">OK</span> ] Peripheral touchscreen detected.</div>
+    <div class="line mobile-only" style="animation-delay:1.11s">[ <span class="ok">OK</span> ] Accelerometer sensor online.</div>
+    <div class="line mobile-only" style="animation-delay:1.5s">[ <span class="ok">OK</span> ] Vibration motor online.</div>
+    <div class="line" style="animation-delay:1.55s">[ <span class="ok">OK</span> ] Thermal sensors initialised</div>
+    <div class="line" style="animation-delay:1.63s">[ <span class="ok">OK</span> ] Cartridge inserted: PAGE-0x1</div>
+    <br>
+    <div class="line" style="animation-delay:2.75s">[ <span class="critical">CRITICAL</span> ] NO BOOTABLE MEDIUM FOUND.</div>
+    <br>
+    <div class="line" style="animation-delay:3.25s">Please insert a bootable device and press any key to retry.</div>
+
+    <div class="line" style="animation-delay:3.7s">_</div>
+
+</div>
+
+</body>
 </html>
