@@ -126,6 +126,8 @@ a:active    {color:var(--ac2);text-decoration:none;}
 h1 {font-size:var(--step-3);line-height:var(--step-3)}
 h2 {font-size:var(--step-2);line-height:var(--step-2)}
 
+pre {font-family: "Cozette", monospace; font-size: 13px;}
+
 .dark-text    {color:var(--cl0);}
 
 .bweh {
@@ -459,8 +461,7 @@ footer p { text-align: center; }
 
 .marquee-content {
     display: flex;
-    gap: 8px;
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 10s linear infinite;
     will-change: transform;
 }
 
@@ -489,8 +490,8 @@ footer p { text-align: center; }
     margin-top: 16px;
 }
 @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(4*88*1px*-1)); }
 }
 
 
