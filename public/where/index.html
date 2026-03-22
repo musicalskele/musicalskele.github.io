@@ -4,9 +4,74 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>...</title>
-    <style>body {margin: 0;background: #000;}</style>
+	<style>
+	body {
+		font-family: "Cozette", monospace;
+		margin: 0;
+		background: #000;
+		background-image: url("../assets/tileable/vein9-128x128.png");
+		background-repeat: repeat;
+		animation: bgscroll 60s linear infinite;
+	}
+
+	@keyframes bgscroll {
+		from {background-position: 0 0;}
+		to {background-position: 0 -256px;}
+	}
+
+	@keyframes flicker {
+		0%      {opacity: 0.72;}
+		25%     {opacity: 0.65;}
+		50%     {opacity: 0.77;}
+		75%     {opacity: 0.74;}
+		100%    {opacity: 0.69;}
+	}
+	</style>
+	<style>
+		.scanlines {
+			position: fixed; inset: 0;
+			width: 100%;  height: 100%;
+			z-index: 666; pointer-events: none;
+			background: repeating-linear-gradient(to right, #000a, #0004 1px, #0004 2px, #000a 2px, #000a 3px);
+			animation: flicker 0.1s infinite;
+		}
+		.zone {
+			position: fixed;
+			top:50%;left: 50%;
+			border-radius:50%;
+			transform: translate(-50%,-50%);
+		}
+		.zone-3 { width:700px; height:700px; }
+		.zone-2 { width:350px; height:350px; }
+		.zone-1 { width:140px; height:140px; }
+
+		#heart {
+			position: fixed;
+			width: 14px;
+			image-rendering: pixelated;
+			z-index: 1000;
+			top:50%;left:50%;
+			transform: translate(-50%, -50%);
+			filter: brightness(0.08);
+			transition: filter 0.72s ease;
+		}
+			body:has(.zone-3:hover) #heart { filter: brightness(0.15); }
+			body:has(.zone-2:hover) #heart { filter: brightness(0.5);  }
+			body:has(.zone-1:hover) #heart { filter: brightness(0.9);  }
+	</style>
+	<!-- 
+		<style>
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(../assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(../assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}
+		</style>
+	-->
 </head>
 <body>
+	<div class="scanlines"></div>
+	<div class="zone zone-3"></div>
+	<div class="zone zone-2"></div>
+	<div class="zone zone-1"></div>
+	<img id="heart" src="../assets/images/heart_heart.png">
 <script>
 
    const ctx = new(AudioContext || webkitAudioContext)();

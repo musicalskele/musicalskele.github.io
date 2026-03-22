@@ -58,7 +58,6 @@
     --fg0:      #0e021e;
     --cl0:      #49456e;
     --border2:  #0e021e;
-
 }
 
 :root:has(#theme-dark:checked) {
@@ -193,7 +192,7 @@ header.window-retro {
 
 @media (max-width: 576px) {
     header.window-retro {width: calc(100% - 52px);
-    margin-left: 13px;margin-right: 13px;}
+    margin-left:         13px;margin-right: 13px;}
 }
 
 .grid-windows {
@@ -221,6 +220,34 @@ header.window-retro {
     .third-panel  { width: auto; aspect-ratio:1; width: fit-content; }
 }
 
+.third-panel-group {
+    display: grid;
+    gap: 12px;
+
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, max-content);
+}
+
+.third-panel-group .window-retro {
+    margin: 0;
+}
+@media (max-width: 820px) {
+    .third-panel-group {
+        grid-auto-flow: row;
+        grid-template-rows: none;
+        grid-template-columns: repeat(4, max-content);
+    }
+}
+@media (max-width: 779px) {
+    .third-panel-group {
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+@media (max-width: 595px) {
+    .third-panel-group {
+        grid-template-columns: repeat(2, max-content);
+    }
+}
 .window {
     position:   relative;
     background: var(--bg0);
@@ -397,7 +424,7 @@ img.heart {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        filter: grayscale(0.3);
+        filter: grayscale(0.4);
         image-rendering: pixelated;
     }
     & img:hover {
@@ -421,13 +448,15 @@ img.heart {
     #0000 0px, #0000 2px,
     #fff1 2px, #fff1 4px
     );
+
     position: fixed; pointer-events: none; margin: 0;
-    animation: scanlines 1s steps(4) infinite;
+    image-rendering: crisp-edges;
+    animation: scanlines 10s steps(64) infinite;
 }
 
 @keyframes scanlines {
-    0%   { background-position: 0 0px; }
-    100% { background-position: 0 4px; }
+    0%   { background-position: 0 px; }
+    100% { background-position: 64px 128px; }
 }
 
 footer {
@@ -476,7 +505,7 @@ footer p { text-align: center; }
 
 .button-group img {
     display: block;
-    filter: grayscale(0.3);
+    filter: grayscale(0.4);
     image-rendering: pixelated;
 }
 
