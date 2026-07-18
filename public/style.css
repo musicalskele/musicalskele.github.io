@@ -520,7 +520,7 @@ footer p { text-align: center; }
 }
 @keyframes scroll-left {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(calc(3*88*1px*-1)); }
+    100% { transform: translateX(calc(4*88*1px*-1)); }
 }
 
 
