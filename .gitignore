@@ -1,3 +1,5 @@
+.vscode/
+
 public/250.html
 public/art
 public/ask
@@ -23,6 +25,7 @@ public/hell
 public/hell
 
 public/voice
+
 
 beep.py
 beep.wav
