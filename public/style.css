@@ -18,12 +18,14 @@
 .theme-switcher {
     justify-content:    center;
     display:    flex;
+    flex-wrap:  wrap;
     gap:        8px;
     margin-top: 12px;
     width:      100%;
 }
 
-.theme-switcher input[type="radio"] {
+.theme-switcher input[type="radio"],
+.theme-switcher input[type="checkbox"] {
     display: none;
 }
 
@@ -45,7 +47,8 @@
     border-color:   var(--bg0);
 }
 
-.theme-switcher input[type="radio"]:checked + label {
+.theme-switcher input[type="radio"]:checked + label,
+.theme-switcher input[type="checkbox"]:checked + label {
     background:     var(--fg0);
     color:          var(--bg0);
     border-color:   var(--bg0);
@@ -67,6 +70,9 @@
     --cl0:      #49456e;
     --border2:  #9096b9;
 }
+
+:root:has(#scanlines-toggle:not(:checked)) .scanlines { display: none; }
+:root:has(#overlay-toggle:not(:checked)) .overlay { display: none; }
 
 @media (resolution: 1dppx), (resolution: 2dppx), (resolution: 3dppx), (resolution: 4dppx) {
     body {
@@ -457,6 +463,80 @@ img.heart {
 @keyframes scanlines {
     0%   { background-position: 0 px; }
     100% { background-position: 64px 128px; }
+}
+
+.settings-btn {
+    position:       fixed;
+    left:           12px;
+    bottom:         12px;
+    z-index:        903;
+
+    cursor:         pointer;
+    font-family:    "Cozette", monospace;
+    font-size:      26px;
+    line-height:    1;
+    padding:        6px 10px;
+    border:         1px solid var(--border2);
+    border-radius:  2px;
+    background:     var(--bg0);
+    color:          var(--fg0);
+}
+
+.settings-btn:hover {background:var(--fg0);color:var(--bg0);border-color:var(--bg0);}
+
+/* ts is complicated for future ref:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:modal */
+dialog.settings-dialog {
+    position:   fixed;
+    inset:      0;
+    margin:     auto;
+    width:      min(90vw, 320px);
+    max-width:  none;
+    color:      var(--fg0);
+
+    transform:  scaleY(0.01);
+    animation:  incorrect-open 0.28s cubic-bezier(0.1, 1.3, 0.2, 1) forwards;
+}
+
+dialog.settings-dialog:modal::backdrop {background:#000;opacity:0.8;}
+
+.settings-dialog form {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    gap:            8px;
+}
+
+.settings-dialog .titlebar .close {
+    appearance:     none;
+    border:         none;
+    margin:         0;
+    padding:        0;
+    height:         auto;
+    cursor:         pointer;
+    font-family:    "Cozette", monospace;
+    font-size:      var(--step);
+    line-height:    inherit;
+}
+
+.settings-actions {width:100%;margin-top:4px;}
+
+.settings-actions button {
+    width:          100%;
+    cursor:         pointer;
+    font-family:    "Cozette", monospace;
+    font-size:      var(--step);
+    padding:        4px 10px;
+    border:         1px solid var(--border2);
+    border-radius:  0;
+    background:     var(--bg0);
+    color:          var(--fg0);
+}
+
+.settings-actions button:hover {
+    background:     var(--fg0);
+    color:          var(--bg0);
+    border-color:   var(--bg0);
 }
 
 footer {

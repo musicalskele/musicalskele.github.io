@@ -119,14 +119,6 @@
 				</div>
 
 			</div>
-			<div class="window-retro">
-				<div class="titlebar"><span>/home/rosa/display.conf</span><span class="close" aria-hidden="true">x</span></div>
-				<div class="theme-switcher">
-					<label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
-					<label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
-					<label><input type="radio" id="theme-auto" name="theme" checked>DAWN </label>
-				</div>
-			</div>
 			</div>
 			
 		</main>
@@ -139,6 +131,36 @@
 				OPERATING α-0.1 <span id="commit-info"></span>
 			</p>
 		</footer>
+
+		<!--
+			settings modal refnotes:
+			- clicking the ::backdrop does not close the dialog (that needs js i think); ESC + the x
+			  button are enough for now
+			- need to figure out a way to like fuckin uhh fix the centering issue hopefully wont be that annoying..
+		-->
+		<button type="button" class="settings-btn" aria-haspopup="dialog" aria-controls="settingsDialog" onclick="document.getElementById('settingsDialog').showModal()">⚙</button>
+
+		<dialog id="settingsDialog" class="window-retro settings-dialog">
+			<form method="dialog">
+				<div class="titlebar"><span>/home/rosa/settings.conf</span><button type="submit" class="close" aria-label="close settings">x</button></div>
+
+				<div class="theme-switcher">
+					<label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
+					<label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
+					<label><input type="radio" id="theme-auto" name="theme" checked>DAWN 🌸</label>
+				</div>
+
+				<div class="theme-switcher">
+					<label><input type="checkbox" id="scanlines-toggle" checked>SCANLINES</label>
+					<label><input type="checkbox" id="overlay-toggle" checked>OVERLAY</label>
+				</div>
+
+				<div class="settings-actions">
+					<button type="reset">RESET DATA</button>
+				</div>
+			</form>
+		</dialog>
+
 		<div id="clicker-game">
 			<div class="game-box">
 				<h2>/home/rosa/clicker</h2>
@@ -173,9 +195,6 @@
 			font-display: swap;
 			}
 		</style>
-		<script>
-
-		</script>
 		<script>
 			const owner = "musicalskele";
 			const repo =  "musicalskele.github.io";
