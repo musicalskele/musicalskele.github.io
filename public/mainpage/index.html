@@ -80,15 +80,7 @@
 							</section>
 
 							<div>
-								<p style="margin-bottom: 0px;">add my button to ur website :3<br>pls tell me about it! &lt3</p>
-								<br>
-								<textarea
-									id="btncode"
-									style="width:192px; max-width:255px; min-width:128px; height:80px; max-height:96px; min-height:64px;
-									font-family:Cozette; font-size:13px; background-color:black; border-radius:0;
-									border-width:1px; border-color:white; color:white;"
-									readonly><a href="https://skele.fyi/" target="_blank"><img src="https://skele.fyi/88x31.gif"></a>
-								</textarea>
+								more <a href="../badges/" target="_blank">here</a>
 							</div>
 						</div>
 					</div>
@@ -145,14 +137,14 @@
 				<div class="titlebar"><span>/home/rosa/settings.conf</span><button type="submit" class="close" aria-label="close settings">x</button></div>
 
 				<div class="theme-switcher">
-					<label><input type="radio" id="theme-light" name="theme">DAY 🌑</label>
-					<label><input type="radio" id="theme-dark" name="theme">NIGHT 🌖</label>
-					<label><input type="radio" id="theme-auto" name="theme" checked>DAWN 🌸</label>
+					<input type="radio" id="theme-light" name="theme"><label for="theme-light">DAY 🌑</label>
+					<input type="radio" id="theme-dark" name="theme"><label for="theme-dark">NIGHT 🌖</label>
+					<input type="radio" id="theme-auto" name="theme" checked><label for="theme-auto">DAWN 🌸</label>
 				</div>
 
 				<div class="theme-switcher">
-					<label><input type="checkbox" id="scanlines-toggle" checked>SCANLINES</label>
-					<label><input type="checkbox" id="overlay-toggle" checked>OVERLAY</label>
+					<input type="checkbox" id="scanlines-toggle" checked><label for="scanlines-toggle">SCANLINES</label>
+					<input type="checkbox" id="overlay-toggle" checked><label for="overlay-toggle">OVERLAY</label>
 				</div>
 
 				<div class="settings-actions">
@@ -216,14 +208,6 @@
 			}
 
 			addCommitInfo();
-		</script>
-		<script>
-		window.onkeydown = e => {
-		if (e.key.toLowerCase() === "u") {
-			const o = document.querySelector(".scanlines");
-			o.style.display = o.style.display === "none" ? "" : "none";
-		}
-		};
 		</script>
 	</body>
 </html>

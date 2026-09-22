@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="../assets/images/icon_heart.png">
+		<title>/home/rosa/buttons</title>
+		<style>
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:400;src:url(assets/fonts/CozetteVector-SUBSET.woff2)format('woff2');font-display:swap;unicode-range:U+0000-024F}
+			@font-face{font-family:"Cozette";font-style:normal;font-weight:700;src:url(assets/fonts/CozetteVectorBold-SUBSET.woff2) format('woff2');font-display:swap;unicode-range:U+0000-024F}
+		</style>
+		<link rel="preload" href="../assets/fonts/CozetteVector-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../assets/fonts/CozetteVectorBold-SUBSET.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="stylesheet" href="../style.css">
+		<style>
+			.btn-page{width:min(100%, 640px);}
+			.btn-category{margin-bottom:calc(var(--step)*2);}
+			.btn-category:last-child{margin-bottom:0;}
+			.btn-category h2{
+				font-size:	var(--step);
+				line-height:var(--step);
+				color:		var(--fg0 );
+				margin:		0 0 4px;
+				letter-spacing:	2px;
+			}
+			.btn-category .desc{margin:0 0 10px;}
+			#buttons.btn-row{
+				display:	flex;
+				flex-wrap:	wrap;
+				align-items:flex-start;
+				gap:	8px;
+			}
+			.me-me-me-me-me-me-me-me textarea{
+				width:		192px;
+				max-width:	255px;
+				min-width:	128px; 
+				
+				height:		80px; 
+				max-height:	96px; 
+				min-height:	64px;
+				margin-top:	8px;
+
+				background-color:var(--bg0); color:var(--fg0);
+				border:1px solid var(--border2); border-radius:0;
+				
+				font-family:"Cozette", monospace;
+				font-size:	var(--step);
+			}
+
+			[data-tooltip]{position:relative;}
+			[data-tooltip]::after{
+				content:	attr(data-tooltip);
+				position:	absolute;
+				bottom:		calc(100% + 6px);
+				padding:	3px 6px;
+				left:50%;
+				
+				transform:translateX(-50%) translateY(4px);
+				
+				background:var(--bg0);
+				color:var(--fg0);
+				border:1px solid var(--border2);
+				border-radius:0;
+				
+				font-family:"Cozette", monospace;
+				font-size:	var(--step);
+				opacity:0;
+				pointer-events:none;
+				transition:opacity .1s ease, transform .1s ease;
+				z-index:11;
+				
+				white-space:nowrap;
+			}
+			[data-tooltip]:hover::after,
+			[data-tooltip]:focus-visible::after{
+				opacity:1;
+				transform:translateX(-50%) translateY(0);
+				transition-delay:.4s;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="bweh centerx">
+		<div class="scanlines"></div>
+		<div class="overlay"></div>
+
+			<header class="window-retro" style="max-width: 600px; min-height: 10em; height: 10em; image-rendering: pixelated; ">
+				<div class="titlebar"><span>/home/rosa/</span><span class="close" aria-hidden="true">x</span></div>
+				<picture style="position: absolute; left: 50%; transform: translateX(-50%);"><img class="centerd" src="../assets/images/icon_heart.png" alt="i spent way too long on this." height="96px"></picture>
+			</header>
+
+			<div class="window-retro btn-page">
+				<div class="titlebar"><span>/home/rosa/buttons</span><span class="close" aria-hidden="true">x</span></div>
+
+				<br>return <a href="../mainpage/" target="_blank">home</a><br><br>
+				<div class="btn-category">
+					<h2>[ computer & games ]</h2>
+					<p class="desc dark-text">computah activite infinite joy programme</p>
+					<section id="buttons" class="btn-row">
+						<a href="https://deltarune.com/" target="_blank" rel="noopener" data-tooltip="deltarune">
+							<img src="../assets/88x31/deltarune.gif" alt="deltarune">
+						</a>
+						<a href="https://undertale.com/" target="_blank" rel="noopener" data-tooltip="undertale">
+							<img src="../assets/88x31/undertale.gif" alt="undertale">
+						</a>
+						<a href="https://helium.computer/" target="_blank" rel="noopener" data-tooltip="ok-ish chromium browser">
+							<img src="../assets/88x31/helium.png" alt="helium browser">
+						</a>
+						
+					</section>
+				</div>
+
+				<div class="btn-category">
+					<h2>[ friends ]</h2>
+					<p class="desc dark-text">personal sites n such</p>
+					<section id="buttons" class="btn-row">
+						<a href="https://witchfuneral.quest/" target="_blank" rel="noopener" data-tooltip="nerd">
+							<img src="../assets/88x31/witchfuneral.png" alt="witch funeral">
+						</a>
+						<a href="https://rosa.dog/" target="_blank" rel="noopener" data-tooltip="what's next? rosa.cat?">
+							<img src="../assets/88x31/rosadog.png" alt="rosa.dog">
+						</a>
+						<a href="https://classic9x.neocities.org/" target="_blank" rel="noopener" data-tooltip="good music">
+							<img src="../assets/88x31/classic9x.png" alt="classic9x">
+						</a>
+					</section>
+				</div>
+
+				<div class="btn-category">
+					<h2>[ other ]</h2>
+					<p class="desc dark-text">couldn't find a category for these lol</p>
+					<section id="buttons" class="btn-row">
+						<a href="#" data-tooltip="powered by estrogen (by alyx.sh)"><img src="../assets/88x31/e2vial.gif" alt="powered by estrogen (by https://alyx.sh)"></a>
+						<a href="#" data-tooltip="this website is miku approved!"><img src="../assets/88x31/miku.gif" alt="this website is miku approved!"></a>
+
+					</section>
+				</div>
+
+				<div class="btn-category me-me-me-me-me-me-me-me">
+					<h2>[ mine ]</h2>
+					<p class="desc dark-text">these are made by me &lt;3</p>
+					<section id="buttons" class="btn-row">
+						<a onclick="navigator.clipboard.writeText(document.getElementById('btncode').value); return true;" data-tooltip="click to copy! :3">
+							<img src="../88x31.gif" alt="my button :3">
+						</a>
+					</section>
+					<textarea id="btncode" readonly><a href="https://skele.fyi/" target="_blank"><img src="https://skele.fyi/88x31.gif"></a></textarea>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p>©2021-2026 - BY ENTERING THIS DOMAIN, YOU ACKNOWLEDGE THE SOVEREIGNTY OF MUSICALSKELE.<br>
+				NO LICENSE HAS BEEN DECLARED; ALL RIGHTS ARE RESERVED UNTIL THE HOUR OF REVELATION. NO REPRODUCTION, DISTRIBUTION, OR USE IS PERMITTED WITHOUT CONSENT.<br>
+				ANY ATTEMPT TO REPLICATE OR DISTRIBUTE WITHOUT PERMISSION SHALL BE MARKED BY THE AUTHORITY.<br>
+				TYPEFACE <a href="https://github.com/the-moonwitch/Cozette">"COZETTE"</a> BY <a href="https://github.com/the-moonwitch">"THE-MOONWITCH"</a>, ACKNOWLEDGED UNDER ITS ORIGINAL TERMS.<br>
+				OPERATING α-0.1
+			</p>
+		</footer>
+
+		<button type="button" class="settings-btn" aria-haspopup="dialog" aria-controls="settingsDialog" onclick="document.getElementById('settingsDialog').showModal()">⚙</button>
+
+		<dialog id="settingsDialog" class="window-retro settings-dialog">
+			<form method="dialog">
+				<div class="titlebar"><span>/home/rosa/settings.conf</span><button type="submit" class="close" aria-label="close settings">x</button></div>
+
+				<div class="theme-switcher">
+					<input type="radio" id="theme-light" name="theme"><label for="theme-light">DAY 🌑</label>
+					<input type="radio" id="theme-dark" name="theme"><label for="theme-dark">NIGHT 🌖</label>
+					<input type="radio" id="theme-auto" name="theme" checked><label for="theme-auto">DAWN 🌸</label>
+				</div>
+
+				<div class="theme-switcher">
+					<input type="checkbox" id="scanlines-toggle" checked><label for="scanlines-toggle">SCANLINES</label>
+					<input type="checkbox" id="overlay-toggle" checked><label for="overlay-toggle">OVERLAY</label>
+				</div>
+
+				<div class="settings-actions">
+					<button type="reset">RESET DATA</button>
+				</div>
+			</form>
+		</dialog>
+
+		<script>
+			const fix = () => document.documentElement.style.width = (document.documentElement.clientWidth & ~1) + "px";
+			window.addEventListener("resize", fix);
+			fix();
+		</script>
+				<style>
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: normal;
+			src: url("../assets/fonts/CozetteVector.woff2") format("woff2");
+			font-display: swap;
+			}
+			@font-face {
+			font-family: "Cozette";
+			font-style: normal;
+			font-weight: bold;
+			src: url("../assets/fonts/CozetteVectorBold.woff2") format("woff2");
+			font-display: swap;
+			}
+		</style>
+	</body>
+</html>

@@ -131,7 +131,7 @@ a:active    {color:var(--ac2);text-decoration:none;}
 h1 {font-size:var(--step-3);line-height:var(--step-3)}
 h2 {font-size:var(--step-2);line-height:var(--step-2)}
 
-pre {font-family: "Cozette", monospace; font-size: 13px;}
+pre {font-family: "Cozette", monospace; font-size: var(--step);}
 
 .dark-text    {color:var(--cl0);}
 
@@ -198,7 +198,7 @@ header.window-retro {
 
 @media (max-width: 576px) {
     header.window-retro {width: calc(100% - 52px);
-    margin-left:         13px;margin-right: 13px;}
+    margin-left:         var(--step);margin-right: var(--step);}
 }
 
 .grid-windows {
@@ -372,7 +372,7 @@ header.window-retro {
 
         h2,p,a{
             animation: incorrect-text 0s linear forwards;
-            opacity: 0;font-size: 13px;
+            opacity: 0;font-size: var(--step);
         }
 
         h2{animation-delay:0.18s;}
@@ -473,7 +473,7 @@ img.heart {
 
     cursor:         pointer;
     font-family:    "Cozette", monospace;
-    font-size:      26px;
+    font-size:      var(--step-2);
     line-height:    1;
     padding:        6px 10px;
     border:         1px solid var(--border2);
